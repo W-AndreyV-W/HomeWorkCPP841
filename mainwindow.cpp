@@ -36,15 +36,12 @@ MainWindow::~MainWindow()
 void MainWindow::on_pB_Toggle_clicked() {
 
 
-    if (ui->pB_Toggle->isChecked()) {
+    if (ui->prB_Bar->value() == 10) {
 
-        if (ui->prB_Bar->value() == 10) {
+        ui->prB_Bar->setValue(0);
+    }
+    else {
 
-            ui->prB_Bar->setValue(0);
-        }
-        else {
-
-            ui->prB_Bar->setValue(ui->prB_Bar->value() + 1);
-        }
+        ui->prB_Bar->setValue(ui->prB_Bar->value() + 1);
     }
 }
